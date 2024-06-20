@@ -1,7 +1,14 @@
 import { useState } from "react";
+import HomeLandingPage from "./Pages/HomeLandingPage";
+import { RouterProvider } from "react-router-dom";
+import routes from "./routes";
 
 function App() {
-  return <></>;
+  return (
+    <div>
+      <RouterProvider router={routes} />
+    </div>
+  );
 }
 
 export default App;
