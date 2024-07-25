@@ -42,6 +42,22 @@ import song1 from  './song1.mp3'
 import song2 from  './song2.mp3'
 import song3 from  './song3.mp3'
 
+//Images
+import kabza from './kabza.png'
+import KabzaIsimo from './KabzaIsimo.jpg'
+import Kina from './Kina.jpg'
+import YesGod from './YesGod.jpg'
+import StokieImage from './StokieImage.png'
+import AnnesImage from './AnnesImage.png'
+
+//Songs
+import KabzaAudio from './KabzaAudio.mp3'
+import KabzaIsimoAudio from './KabzaIsimoAudio.mp3'
+import KinaAudio from './KinaAudio.mp3'
+import YesGodAudio from './YesGodAudio.mp3'
+import StokieAudio from './StokieAudio.mp3'
+import AnnesAudio from './AnnesAudio.mp3'
+
 export const assets = {
     bell_icon,
     home_icon,
@@ -117,66 +133,66 @@ export const albumsData = [
 export const songsData = [
     {
         id:0,
-        name: "Song One",
-        image: img1,
-        file:song1,
-        desc:"Put a smile on your face with these happy tunes",
+        name: "Khusela",
+        image: kabza,
+        file:KabzaAudio,
+        desc:"Kabza De Small ft. Msaki (official)",
         duration:"3:00"
     },
     {
         id:1,
-        name: "Song Two",
-        image: img2,
-        file:song2,
-        desc:"Put a smile on your face with these happy tunes",
+        name: "Isimo",
+        image: KabzaIsimo,
+        file:KabzaIsimoAudio,
+        desc:"Kabza De Small ft. Mthunzi",
         duration:"2:20"
     },
     {
         id:2,
-        name: "Song Three",
-        image: img3,
-        file:song3,
-        desc:"Put a smile on your face with these happy tunes",
+        name: "Get You The Moon",
+        image: Kina,
+        file:KinaAudio,
+        desc:"Kina ft. Snow",
         duration:"2:32"
     },
     {
         id:3,
-        name: "Song Four",
-        image: img4,
-        file:song1,
-        desc:"Put a smile on your face with these happy tunes",
+        name: "Yes God",
+        image: YesGod,
+        file:YesGodAudio,
+        desc:"Oscar Mbo ft. KG Smallz, Morda, Thakzin, & Mhaw Keys",
         duration:"2:50"
     },
     {
         id:4,
-        name: "Song Five",
-        image: img5,
-        file:song2,
-        desc:"Put a smile on your face with these happy tunes",
+        name: "Awukhuzeki",
+        image: StokieImage,
+        file:StokieAudio,
+        desc:"Dj Stokie Ft, Ommit, Sobzeen & Zeenhle",
         duration:"3:10"
     },
     {
         id:5,
-        name: "Song Six",
-        image: img14    ,
-        file:song3,
-        desc:"Put a smile on your face with these happy tunes",
+        name: "Leave Me",
+        image: AnnesImage,
+        file:AnnesAudio,
+        desc:"Annes",
         duration:"2:45"
     },
-    // {
-    //     id:6,
-    //     name: "Song Seven",
-    //     image: img7,
-    //     file:song1,
-    //     desc:"Put a smile on your face with these happy tunes",
-    //     duration:"2:18"
-    // },
-    // {
-    //     id:7,
-    //     name: "Song Eight",
-    //     image: img12,
-    //     file:song2,
-    //     desc:"Put a smile on your face with these happy tunes",
-    //     duration:"2:35"
-    // }
+    {
+        id:6,
+        name: "Song Seven",
+        image: img7,
+        file:song1,
+        desc:"Put a smile on your face with these happy tunes",
+        duration:"2:18"
+    },
+    {
+        id:7,
+        name: "Song Eight",
+        image: img12,
+        file:song2,
+        desc:"Put a smile on your face with these happy tunes",
+        duration:"2:35"
+    }
 ]

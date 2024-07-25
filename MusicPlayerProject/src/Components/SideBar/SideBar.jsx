@@ -1,5 +1,4 @@
 import React from "react";
-import Logo_brand from "../../assets/Logo/Logo_brand.png";
 import { FaHome, FaSearch, FaPlus } from "react-icons/fa";
 import { RiStackFill } from "react-icons/ri";
 

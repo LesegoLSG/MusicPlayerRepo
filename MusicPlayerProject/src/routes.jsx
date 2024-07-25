@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomeLandingPage from "./Pages/HomeLandingPage";
 import DisplayHome from "./Components/Display/DisplayHome";
+import LoginPage from "./Pages/LoginPage";
+import DisplayAlbum from "./Components/Album/DisplayAlbum";
 
 const routes = createBrowserRouter([
   {
@@ -11,7 +13,15 @@ const routes = createBrowserRouter([
         index: true,
         element: <DisplayHome />,
       },
+      {
+        path: "/album/:id",
+        element: <DisplayAlbum />,
+      },
     ],
+  },
+  {
+    path: "/signin",
+    element: <LoginPage />,
   },
 ]);
 export default routes;
