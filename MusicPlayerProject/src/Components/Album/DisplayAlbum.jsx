@@ -6,16 +6,19 @@ import { FiClock } from "react-icons/fi";
 import { PlayerContext } from "../../Context/PlayerContext";
 
 const DisplayAlbum = () => {
-  const { id } = useParams();
-  const albumData = albumsData[id];
+  const { id } = useParams(); // Extracts the album ID from the URL parameters
+  const albumData = albumsData[id]; // Retrieves the album data based on the ID
 
-  const { playUsingId } = useContext(PlayerContext);
+  const { playUsingId } = useContext(PlayerContext); // Accesses the playUsingId function from the PlayerContext
 
   return (
     <>
+      {/* Navigation Bar */}
       <NavBar />
+      {/* Album Information Section */}
       <div className="mt-10 flex gap-8 flex-col md:flex-row md:items-end">
         <img className="w-48 rounded" src={albumData.image} alt="albumImage1" />
+        {/* Album Details */}
         <div className="flex flex-col">
           <p>PlayList</p>
           <h2 className="text-4xl font-bold mb-4 md:text-6xl ">
@@ -33,6 +36,7 @@ const DisplayAlbum = () => {
           </p>
         </div>
       </div>
+      {/* Song List Header */}
       <div className="grid grid-cols-3 sm:grid-cols-4 mt-10 mb--4 pl-2 text-blue-200">
         <p>
           <b className="mr-4">#</b>Title
@@ -42,6 +46,7 @@ const DisplayAlbum = () => {
         <FiClock size={22} />
       </div>
       <hr />
+      {/* Song List */}
       {songsData.map((song, index) => (
         <div
           key={index}

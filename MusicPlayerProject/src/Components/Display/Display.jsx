@@ -5,19 +5,21 @@ import DisplayAlbum from "../Album/DisplayAlbum";
 import { albumsData } from "../../assets/assets";
 
 const Display = () => {
-  const displayRef = useRef();
-  const location = useLocation();
-  const isAlbum = location.pathname.includes("album");
-  const albumId = isAlbum ? location.pathname.slice(-1) : "";
-  const bgColor = albumsData[Number(albumId)].bgColor;
+  const displayRef = useRef(); // Reference to the display container div
+
+  const location = useLocation(); // Hook to access the current location object
+  const isAlbum = location.pathname.includes("album"); // Check if the current path includes "album"
+  const albumId = isAlbum ? location.pathname.slice(-1) : ""; // Extract album ID from the path if it includes "album"
+  const bgColor = albumsData[Number(albumId)].bgColor; // Get the background color for the album based on its ID
 
   useEffect(() => {
     if (isAlbum) {
-      displayRef.current.style.background = `linear-gradient(${bgColor}, #121212)`;
+      // If the path includes "album" and bgColor is defined
+      displayRef.current.style.background = `linear-gradient(${bgColor}, #121212)`; // Set background gradient
     } else {
-      displayRef.current.style.background = `#121212`;
+      displayRef.current.style.background = `#121212`; // Set background color for non-album pages
     }
-  });
+  }, [isAlbum, bgColor]);
 
   return (
     <div
@@ -25,7 +27,9 @@ const Display = () => {
       ref={displayRef}
     >
       <Routes>
+        {/* Route for the home display */}
         <Route path="/" element={<DisplayHome />} />
+        {/* Route for displaying the album based on the album ID */}
         <Route path="/album/:id" element={<DisplayAlbum />} />
       </Routes>
     </div>
