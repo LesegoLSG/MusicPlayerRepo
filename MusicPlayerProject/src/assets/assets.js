@@ -42,13 +42,17 @@ import song1 from  './song1.mp3'
 import song2 from  './song2.mp3'
 import song3 from  './song3.mp3'
 
-//Images
+//Songs Images
 import kabza from './kabza.png'
 import KabzaIsimo from './KabzaIsimo.jpg'
 import Kina from './Kina.jpg'
 import YesGod from './YesGod.jpg'
 import StokieImage from './StokieImage.png'
 import AnnesImage from './AnnesImage.png'
+import MlindoAlbum from './MlindoAlbum.jpg'
+import Sheebe from './Sheebe.png'
+import BigZuluImage from './BigZuluImage.png'
+import JoyousImage from './JoyousImage.png'
 
 //Songs
 import KabzaAudio from './KabzaAudio.mp3'
@@ -57,6 +61,19 @@ import KinaAudio from './KinaAudio.mp3'
 import YesGodAudio from './YesGodAudio.mp3'
 import StokieAudio from './StokieAudio.mp3'
 import AnnesAudio from './AnnesAudio.mp3'
+import MlindoAudio from './MlindoAudio.mp3'
+import SheebeAudio from './SheebeAudio.mp3'
+import BigZuluAudio from './BigZuluAudio.mp3'
+import JoyousAudio from './JoyousAudio.mp3'
+
+
+//Album Images
+import Top50 from "../assets/AlbumImages/Top50.jpg";
+import WeeklyCharts from "../assets/AlbumImages/WeeklyCharts.jpg";
+import MegaHit from "../assets/AlbumImages/MegaHit.png";
+import NewFriday from "../assets/AlbumImages/NewFriday.png";
+import Viral50 from '../assets/AlbumImages/Viral50.jpg'
+
 
 export const assets = {
     bell_icon,
@@ -90,45 +107,60 @@ export const albumsData = [
         id:0,
         name: "Top 50 Global",
         image: img8,
-        desc:"Your weekly update of the most played tracks",
+        desc:"Discover the world's most popular tracks updated weekly",
         bgColor:"#2a4365"
     },
     {   
         id:1,
-        name: "Top 50 India",
-        image: img9,
-        desc:"Your weekly update of the most played tracks",
+        name: "Top 50 South Africa",
+        image: Top50,
+        desc:"Stay updated with South Africa's hottest tracks of the week",
         bgColor:"#22543d"
     },
     {   
         id:2,
-        name: "Trending India",
-        image: img10,
-        desc:"Your weekly update of the most played tracks",
-        bgColor:"#742a2a"
+        name: "Trending South Africa",
+        image: WeeklyCharts,
+        desc:" Catch the latest trends in South African music with weekly updates",
+        bgColor:"#4fa183"
     },
     {   
         id:3,
         name: "Trending Global",
         image: img16,
-        desc:"Your weekly update of the most played tracks",
+        desc:"Explore the trending tracks globally, refreshed every week",
         bgColor:"#44337a"
     },
     {   
         id:4,
-        name: "Mega Hits,",
-        image: img11,
-        desc:"Your weekly update of the most played tracks",
-        bgColor:"#234e52"
+        name: "Mega Hits",
+        image: MegaHit,
+        desc:"Dive into the biggest hits of the week, all in one place",
+        bgColor:"#a14f8e"
     },
     {   
         id:5,
+        name: "Happy Fridays",
+        image: NewFriday,
+        desc:"Start your weekend with the happiest tracks, updated weekly",
+        bgColor:"#744210"
+    },
+    {   
+        id:6,
         name: "Happy Favorites",
         image: img15,
-        desc:"Your weekly update of the most played tracks",
+        desc:"Enjoy your favorite happy tunes, refreshed every week",
+        bgColor:"#acbf3f"
+    },
+    {   
+        id:7,
+        name: "Viral 50 Global",
+        image: Viral50,
+        desc:"Discover the songs going viral, updated weekly",
         bgColor:"#744210"
     }
 ]
+
 
 export const songsData = [
     {
@@ -137,7 +169,7 @@ export const songsData = [
         image: kabza,
         file:KabzaAudio,
         desc:"Kabza De Small ft. Msaki (official)",
-        duration:"3:00"
+        duration:"08:22"
     },
     {
         id:1,
@@ -145,7 +177,7 @@ export const songsData = [
         image: KabzaIsimo,
         file:KabzaIsimoAudio,
         desc:"Kabza De Small ft. Mthunzi",
-        duration:"2:20"
+        duration:"04:14"
     },
     {
         id:2,
@@ -153,7 +185,7 @@ export const songsData = [
         image: Kina,
         file:KinaAudio,
         desc:"Kina ft. Snow",
-        duration:"2:32"
+        duration:"03:14"
     },
     {
         id:3,
@@ -161,7 +193,7 @@ export const songsData = [
         image: YesGod,
         file:YesGodAudio,
         desc:"Oscar Mbo ft. KG Smallz, Morda, Thakzin, & Mhaw Keys",
-        duration:"2:50"
+        duration:"04:00"
     },
     {
         id:4,
@@ -169,7 +201,7 @@ export const songsData = [
         image: StokieImage,
         file:StokieAudio,
         desc:"Dj Stokie Ft, Ommit, Sobzeen & Zeenhle",
-        duration:"3:10"
+        duration:"06:33"
     },
     {
         id:5,
@@ -177,22 +209,38 @@ export const songsData = [
         image: AnnesImage,
         file:AnnesAudio,
         desc:"Annes",
-        duration:"2:45"
+        duration:"03:40"
     },
     {
         id:6,
-        name: "Song Seven",
-        image: img7,
-        file:song1,
+        name: "Imoto",
+        image: MlindoAlbum,
+        file:MlindoAudio,
         desc:"Put a smile on your face with these happy tunes",
-        duration:"2:18"
+        duration:"04:34"
     },
     {
         id:7,
-        name: "Song Eight",
-        image: img12,
-        file:song2,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"2:35"
+        name: "Malume",
+        image: Sheebe,
+        file:SheebeAudio,
+        desc:"Sheebe shxt",
+        duration:"03:20"
+    },
+    {
+        id:8,
+        name: "Inhlupheko",
+        image: BigZuluImage,
+        file:BigZuluAudio,
+        desc:"Big Zulu Ft. Mduduzi Ncube",
+        duration:"05:16"
+    },
+    {
+        id:9,
+        name: "Ndenzel'Uncebo",
+        image: JoyousImage,
+        file:JoyousAudio,
+        desc:"Joyous Celebration",
+        duration:"07:35"
     }
 ]
