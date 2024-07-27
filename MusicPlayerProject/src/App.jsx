@@ -6,6 +6,7 @@ import routes from "./routes";
 function App() {
   return (
     <div>
+      {/* RouterProvider used to provide routing configuration to the application */}
       <RouterProvider router={routes} />
       {/* <HomeLandingPage /> */}
     </div>
