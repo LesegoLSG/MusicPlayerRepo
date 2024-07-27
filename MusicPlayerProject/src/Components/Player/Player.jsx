@@ -8,6 +8,7 @@ import { FaMicrophone } from "react-icons/fa";
 import { PlayerContext } from "../../Context/PlayerContext";
 
 const Player = () => {
+  // Destructuring the PlayerContext to get necessary values and functions
   const {
     seekBar,
     seekBg,
@@ -21,8 +22,16 @@ const Player = () => {
     seekSong,
   } = useContext(PlayerContext);
 
+  // Helper function to format time into MM:SS
+  const formatTime = (minute, second) => {
+    const formattedMinute = String(minute).padStart(2, "0");
+    const formattedSecond = String(second).padStart(2, "0");
+    return `${formattedMinute}:${formattedSecond}`;
+  };
+
   return (
     <div className="h-[10%] bg-black flex justify-between items-center text-white px-4 ">
+      {/* Display the current track's image and name, visible only on large screens */}
       <div className="hidden lg:flex items-center gap-4">
         <img className="w-12" src={track.image} alt="" />
         <div>
@@ -30,6 +39,7 @@ const Player = () => {
           <p>{track.desc.slice(0, 12)}</p>
         </div>
       </div>
+      {/* Control buttons and seek bar */}
       <div className="flex flex-col justify-center items-center gap-1 m-auto ">
         <div className="flex gap-4">
           <FaShuffle size={20} className="cursor-pointer" />
@@ -51,10 +61,10 @@ const Player = () => {
           />
           <RiLoopLeftFill size={20} className="cursor-pointer" />
         </div>
+        {/* Seek bar and time display */}
+
         <div className="flex items-center gap-5">
-          <p>
-            {time.currentTime.minute}:{time.currentTime.second}
-          </p>
+          <p>{formatTime(time.currentTime.minute, time.currentTime.second)}</p>
           <div
             className="w-[60vw] max-w-[500px] bg-gray-300 rounded-full cursor-pointer"
             ref={seekBg}
@@ -65,11 +75,10 @@ const Player = () => {
               ref={seekBar}
             />
           </div>
-          <p>
-            {time.totalTime.minute}:{time.totalTime.second}
-          </p>
+          <p>{formatTime(time.totalTime.minute, time.totalTime.second)}</p>
         </div>
       </div>
+      {/* Microphone icon, visible only on large screens */}
       <div className="hidden lg:flex items-center gap-2 opacity-75">
         <FaMicrophone />
       </div>
