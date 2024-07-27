@@ -2,10 +2,11 @@ import React from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
+//NavBar with navigation arrows and authentication buttons
 const NavBar = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-blue-400 w-full flex justify-between items-center font-semibold px-2 py-4">
+    <div className="bg-neutral-700 w-full flex justify-between items-center font-semibold px-2 py-4 rounded-md">
       <div className="flex items-center gap-2">
         <FaArrowLeft
           onClick={() => navigate(-1)}
@@ -16,9 +17,11 @@ const NavBar = () => {
           className="text-white text-2xl cursor-pointer"
         />
       </div>
-      <div>
-        <button className="text-white">Sign up</button>
-        <button className="text-white" onClick={() => navigate("/signin")}>
+      <div className="flex gap-x-2">
+        <button className="btnAction" onClick={() => navigate("/signup")}>
+          Sign up
+        </button>
+        <button className="btnAction" onClick={() => navigate("/signin")}>
           Login
         </button>
       </div>
