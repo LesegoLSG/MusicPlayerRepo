@@ -10,4 +10,29 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
-  
+
+  @layer components{
+    .inputField{
+      @apply w-full p-2 border border-gray-100 bg-transparent rounded-md text-white
+    }
+
+    .successBtn{
+      @apply w-full p-2 rounded-lg text-white text-lg font-bold bg-green-600
+    }
+    .authBtn{
+      @apply w-full flex justify-center gap-x-2 items-center px-2 lg:px-12 text-white text-xl font-semibold py-2 rounded-lg border border-white;
+      transition: transform 0.2s ease-in-out;
+    }
+    .authBtn:hover{
+      @apply scale-105
+    }
+
+    .btnAction{
+      @apply min-w-20 bg-white text-black rounded-3xl px-4 py-2 transition-transform ;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .btnAction:hover{
+      @apply scale-110
+    }
+  }
