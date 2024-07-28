@@ -123,7 +123,10 @@ const SignupPage = () => {
           <div className="w-full lg:w-[30%] flex flex-col gap-y-4 px- py-10 ">
             {page == 0 && (
               <div className="text-white w-full flex flex-col justify-center items-center my-4">
-                <SiNeteasecloudmusic className="text-hoverColor" size={32} />
+                <SiNeteasecloudmusic
+                  className="text-hoverColor my-2"
+                  size={50}
+                />
                 <h1 className="text-2xl md:text-4xl flex flex-col justify-center items-center font-extrabold text-center ">
                   Sign up for free <br /> and <br /> enjoy good melody
                 </h1>

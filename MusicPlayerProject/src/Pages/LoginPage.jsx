@@ -66,7 +66,7 @@ const LoginPage = () => {
           {/* header */}{" "}
           <div className="w-full lg:w-[30%]">
             <div className="w-full flex flex-col justify-center items-center gap-y-1 text-white my-10">
-              <SiNeteasecloudmusic size={32} />
+              <SiNeteasecloudmusic size={50} className="text-hoverColor my-2" />
               <h1 className="text-white text-2xl md:text-4xl font-extrabold  text-center">
                 Login to Less-Ego
               </h1>
