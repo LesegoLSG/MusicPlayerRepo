@@ -20,7 +20,7 @@ export const validateSimplePassword = (password) => {
 };
 
 export const validatePersonalDetails = (name, dateOfBirth, gender) => {
-  // Personal details validation (basic example)
+  // Personal details validation
   return name.trim() !== "" && dateOfBirth !== "" && gender !== "";
 };
 

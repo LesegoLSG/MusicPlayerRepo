@@ -1,6 +1,7 @@
 import React from "react";
 import { validateEmail } from "../../Components/Reusables/FomValidation";
 
+//Step 1 of sign up process
 const EmailContainer = ({ formData, setFormData, isValid }) => {
   const handleEmailChange = (e) => {
     const email = e.target.value;
