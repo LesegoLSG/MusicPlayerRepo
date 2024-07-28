@@ -3,6 +3,7 @@ import HomeLandingPage from "./Pages/HomeLandingPage";
 import DisplayHome from "./Components/Display/DisplayHome";
 import LoginPage from "./Pages/LoginPage";
 import DisplayAlbum from "./Components/Album/DisplayAlbum";
+import SignupPage from "./Pages/SignupPage";
 
 const routes = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const routes = createBrowserRouter([
   {
     path: "/signin",
     element: <LoginPage />,
+  },
+  {
+    path: "/signup",
+    element: <SignupPage />,
   },
 ]);
 export default routes;
